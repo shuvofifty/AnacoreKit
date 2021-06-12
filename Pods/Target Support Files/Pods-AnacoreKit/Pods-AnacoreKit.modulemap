@@ -1,0 +1,6 @@
+framework module Pods_AnacoreKit {
+  umbrella header "Pods-AnacoreKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

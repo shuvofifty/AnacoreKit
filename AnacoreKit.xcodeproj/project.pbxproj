@@ -7,9 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDC3DA1E2A919E765EFC9C83 /* Pods_AnacoreKit_AnacoreKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */; };
+		E2266D2A50AB455498513790 /* Pods_AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */; };
 		F87EAB37266DE73500A15F6E /* AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87EAB2D266DE73500A15F6E /* AnacoreKit.framework */; };
 		F87EAB3C266DE73500A15F6E /* AnacoreKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB3B266DE73500A15F6E /* AnacoreKitTests.swift */; };
 		F87EAB3E266DE73500A15F6E /* AnacoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F87EAB30266DE73500A15F6E /* AnacoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F87EAB66266DE7FA00A15F6E /* JRADivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB4C266DE7FA00A15F6E /* JRADivider.swift */; };
+		F87EAB67266DE7FA00A15F6E /* JRACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB4E266DE7FA00A15F6E /* JRACard.swift */; };
+		F87EAB68266DE7FA00A15F6E /* JRABorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB51266DE7FA00A15F6E /* JRABorderLabel.swift */; };
+		F87EAB69266DE7FA00A15F6E /* JRALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB52266DE7FA00A15F6E /* JRALabel.swift */; };
+		F87EAB6A266DE7FA00A15F6E /* JRATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB54266DE7FA00A15F6E /* JRATextField.swift */; };
+		F87EAB6B266DE7FA00A15F6E /* JRAOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB57266DE7FA00A15F6E /* JRAOverlay.swift */; };
+		F87EAB6C266DE7FA00A15F6E /* JRABaseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB59266DE7FA00A15F6E /* JRABaseModal.swift */; };
+		F87EAB6D266DE7FA00A15F6E /* JRARootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB5B266DE7FA00A15F6E /* JRARootVC.swift */; };
+		F87EAB6E266DE7FA00A15F6E /* JRAStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB5D266DE7FA00A15F6E /* JRAStackView.swift */; };
+		F87EAB6F266DE7FA00A15F6E /* JRAConstraintStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB5F266DE7FA00A15F6E /* JRAConstraintStruct.swift */; };
+		F87EAB70266DE7FA00A15F6E /* JRAStyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB61266DE7FA00A15F6E /* JRAStyleConfig.swift */; };
+		F87EAB71266DE7FA00A15F6E /* JRAStyleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */; };
+		F87EAB72266DE7FA00A15F6E /* JRALayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB64266DE7FA00A15F6E /* JRALayoutHelper.swift */; };
+		F87EAB73266DE7FA00A15F6E /* JRAAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB65266DE7FA00A15F6E /* JRAAnimationHelper.swift */; };
+		F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79466266DE90100E7B2CA /* AppDelegate.swift */; };
+		F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79468266DE90100E7B2CA /* SceneDelegate.swift */; };
+		F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7946A266DE90100E7B2CA /* ViewController.swift */; };
+		F8F7946E266DE90100E7B2CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F7946C266DE90100E7B2CA /* Main.storyboard */; };
+		F8F79470266DE90300E7B2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F7946F266DE90300E7B2CA /* Assets.xcassets */; };
+		F8F79473266DE90300E7B2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F79471266DE90300E7B2CA /* LaunchScreen.storyboard */; };
+		F8F7947F266F082900E7B2CA /* JRALayouthelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7947E266F082900E7B2CA /* JRALayouthelperTests.swift */; };
+		F8F79488266F2DEB00E7B2CA /* GWTExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79487266F2DEB00E7B2CA /* GWTExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +47,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		340ACA44880744E53498EBC2 /* Pods-AnacoreKit-AnacoreKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit-AnacoreKitTests.debug.xcconfig"; path = "Target Support Files/Pods-AnacoreKit-AnacoreKitTests/Pods-AnacoreKit-AnacoreKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BBD5F5C7A007050BB51EC8A /* Pods-AnacoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit.release.xcconfig"; path = "Target Support Files/Pods-AnacoreKit/Pods-AnacoreKit.release.xcconfig"; sourceTree = "<group>"; };
+		5F5647F3E41F3F9B894346F4 /* Pods-AnacoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit.debug.xcconfig"; path = "Target Support Files/Pods-AnacoreKit/Pods-AnacoreKit.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF187469C429CACFC495C86 /* Pods-AnacoreKit-AnacoreKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; path = "Target Support Files/Pods-AnacoreKit-AnacoreKitTests/Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnacoreKit_AnacoreKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87EAB2D266DE73500A15F6E /* AnacoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnacoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87EAB30266DE73500A15F6E /* AnacoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnacoreKit.h; sourceTree = "<group>"; };
 		F87EAB31266DE73500A15F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87EAB36266DE73500A15F6E /* AnacoreKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnacoreKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87EAB3B266DE73500A15F6E /* AnacoreKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnacoreKitTests.swift; sourceTree = "<group>"; };
 		F87EAB3D266DE73500A15F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87EAB4C266DE7FA00A15F6E /* JRADivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRADivider.swift; sourceTree = "<group>"; };
+		F87EAB4E266DE7FA00A15F6E /* JRACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRACard.swift; sourceTree = "<group>"; };
+		F87EAB51266DE7FA00A15F6E /* JRABorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRABorderLabel.swift; sourceTree = "<group>"; };
+		F87EAB52266DE7FA00A15F6E /* JRALabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRALabel.swift; sourceTree = "<group>"; };
+		F87EAB54266DE7FA00A15F6E /* JRATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRATextField.swift; sourceTree = "<group>"; };
+		F87EAB57266DE7FA00A15F6E /* JRAOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAOverlay.swift; sourceTree = "<group>"; };
+		F87EAB59266DE7FA00A15F6E /* JRABaseModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRABaseModal.swift; sourceTree = "<group>"; };
+		F87EAB5B266DE7FA00A15F6E /* JRARootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRARootVC.swift; sourceTree = "<group>"; };
+		F87EAB5D266DE7FA00A15F6E /* JRAStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAStackView.swift; sourceTree = "<group>"; };
+		F87EAB5F266DE7FA00A15F6E /* JRAConstraintStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAConstraintStruct.swift; sourceTree = "<group>"; };
+		F87EAB61266DE7FA00A15F6E /* JRAStyleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAStyleConfig.swift; sourceTree = "<group>"; };
+		F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAStyleProtocols.swift; sourceTree = "<group>"; };
+		F87EAB64266DE7FA00A15F6E /* JRALayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRALayoutHelper.swift; sourceTree = "<group>"; };
+		F87EAB65266DE7FA00A15F6E /* JRAAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAAnimationHelper.swift; sourceTree = "<group>"; };
+		F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnacoreKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F79466266DE90100E7B2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8F79468266DE90100E7B2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F8F7946A266DE90100E7B2CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8F7946D266DE90100E7B2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8F7946F266DE90300E7B2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8F79472266DE90300E7B2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8F79474266DE90300E7B2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8F7947E266F082900E7B2CA /* JRALayouthelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRALayouthelperTests.swift; sourceTree = "<group>"; };
+		F8F79487266F2DEB00E7B2CA /* GWTExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GWTExpression.swift; sourceTree = "<group>"; };
+		FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnacoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2266D2A50AB455498513790 /* Pods_AnacoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +99,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87EAB37266DE73500A15F6E /* AnacoreKit.framework in Frameworks */,
+				CDC3DA1E2A919E765EFC9C83 /* Pods_AnacoreKit_AnacoreKitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F79461266DE90100E7B2CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC3F348C4833C667CCAA5793 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */,
+				AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F87EAB23266DE73500A15F6E = {
 			isa = PBXGroup;
 			children = (
 				F87EAB2F266DE73500A15F6E /* AnacoreKit */,
 				F87EAB3A266DE73500A15F6E /* AnacoreKitTests */,
+				F8F79465266DE90100E7B2CA /* AnacoreKitDemo */,
 				F87EAB2E266DE73500A15F6E /* Products */,
+				FE2535D5B1DD7BABB930B5DB /* Pods */,
+				CC3F348C4833C667CCAA5793 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +139,7 @@
 			children = (
 				F87EAB2D266DE73500A15F6E /* AnacoreKit.framework */,
 				F87EAB36266DE73500A15F6E /* AnacoreKitTests.xctest */,
+				F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +147,7 @@
 		F87EAB2F266DE73500A15F6E /* AnacoreKit */ = {
 			isa = PBXGroup;
 			children = (
+				F87EAB49266DE7FA00A15F6E /* framework */,
 				F87EAB30266DE73500A15F6E /* AnacoreKit.h */,
 				F87EAB31266DE73500A15F6E /* Info.plist */,
 			);
@@ -80,10 +157,202 @@
 		F87EAB3A266DE73500A15F6E /* AnacoreKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8F7947B266F07C300E7B2CA /* framework */,
 				F87EAB3B266DE73500A15F6E /* AnacoreKitTests.swift */,
 				F87EAB3D266DE73500A15F6E /* Info.plist */,
 			);
 			path = AnacoreKitTests;
+			sourceTree = "<group>";
+		};
+		F87EAB49266DE7FA00A15F6E /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB4A266DE7FA00A15F6E /* UI */,
+				F87EAB5E266DE7FA00A15F6E /* Models */,
+				F87EAB60266DE7FA00A15F6E /* Configs */,
+				F87EAB63266DE7FA00A15F6E /* Service */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		F87EAB4A266DE7FA00A15F6E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB4B266DE7FA00A15F6E /* Misc */,
+				F87EAB4D266DE7FA00A15F6E /* Card */,
+				F87EAB4F266DE7FA00A15F6E /* Label */,
+				F87EAB53266DE7FA00A15F6E /* TextField */,
+				F87EAB55266DE7FA00A15F6E /* Modals */,
+				F87EAB5A266DE7FA00A15F6E /* ViewControllers */,
+				F87EAB5C266DE7FA00A15F6E /* Stack */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F87EAB4B266DE7FA00A15F6E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB4C266DE7FA00A15F6E /* JRADivider.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		F87EAB4D266DE7FA00A15F6E /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB4E266DE7FA00A15F6E /* JRACard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		F87EAB4F266DE7FA00A15F6E /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB50266DE7FA00A15F6E /* BorderLabel */,
+				F87EAB52266DE7FA00A15F6E /* JRALabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		F87EAB50266DE7FA00A15F6E /* BorderLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB51266DE7FA00A15F6E /* JRABorderLabel.swift */,
+			);
+			path = BorderLabel;
+			sourceTree = "<group>";
+		};
+		F87EAB53266DE7FA00A15F6E /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB54266DE7FA00A15F6E /* JRATextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		F87EAB55266DE7FA00A15F6E /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB56266DE7FA00A15F6E /* Overlays */,
+				F87EAB58266DE7FA00A15F6E /* Modal */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		F87EAB56266DE7FA00A15F6E /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB57266DE7FA00A15F6E /* JRAOverlay.swift */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
+		F87EAB58266DE7FA00A15F6E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB59266DE7FA00A15F6E /* JRABaseModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		F87EAB5A266DE7FA00A15F6E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB5B266DE7FA00A15F6E /* JRARootVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F87EAB5C266DE7FA00A15F6E /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB5D266DE7FA00A15F6E /* JRAStackView.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F87EAB5E266DE7FA00A15F6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB5F266DE7FA00A15F6E /* JRAConstraintStruct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F87EAB60266DE7FA00A15F6E /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB61266DE7FA00A15F6E /* JRAStyleConfig.swift */,
+				F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		F87EAB63266DE7FA00A15F6E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F87EAB64266DE7FA00A15F6E /* JRALayoutHelper.swift */,
+				F87EAB65266DE7FA00A15F6E /* JRAAnimationHelper.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F8F79465266DE90100E7B2CA /* AnacoreKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F8F79466266DE90100E7B2CA /* AppDelegate.swift */,
+				F8F79468266DE90100E7B2CA /* SceneDelegate.swift */,
+				F8F7946A266DE90100E7B2CA /* ViewController.swift */,
+				F8F7946C266DE90100E7B2CA /* Main.storyboard */,
+				F8F7946F266DE90300E7B2CA /* Assets.xcassets */,
+				F8F79471266DE90300E7B2CA /* LaunchScreen.storyboard */,
+				F8F79474266DE90300E7B2CA /* Info.plist */,
+			);
+			path = AnacoreKitDemo;
+			sourceTree = "<group>";
+		};
+		F8F7947B266F07C300E7B2CA /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				F8F79486266F0FFC00E7B2CA /* TestHelpers */,
+				F8F7947D266F080200E7B2CA /* Service */,
+				F8F7947C266F07CC00E7B2CA /* UI */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
+		F8F7947C266F07CC00E7B2CA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F8F7947D266F080200E7B2CA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F8F7947E266F082900E7B2CA /* JRALayouthelperTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F8F79486266F0FFC00E7B2CA /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F8F79487266F2DEB00E7B2CA /* GWTExpression.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		FE2535D5B1DD7BABB930B5DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5647F3E41F3F9B894346F4 /* Pods-AnacoreKit.debug.xcconfig */,
+				5BBD5F5C7A007050BB51EC8A /* Pods-AnacoreKit.release.xcconfig */,
+				340ACA44880744E53498EBC2 /* Pods-AnacoreKit-AnacoreKitTests.debug.xcconfig */,
+				5FF187469C429CACFC495C86 /* Pods-AnacoreKit-AnacoreKitTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87EAB41266DE73500A15F6E /* Build configuration list for PBXNativeTarget "AnacoreKit" */;
 			buildPhases = (
+				953E8211471C7D353CC9CA84 /* [CP] Check Pods Manifest.lock */,
 				F87EAB28266DE73500A15F6E /* Headers */,
 				F87EAB29266DE73500A15F6E /* Sources */,
 				F87EAB2A266DE73500A15F6E /* Frameworks */,
@@ -122,6 +392,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F87EAB44266DE73500A15F6E /* Build configuration list for PBXNativeTarget "AnacoreKitTests" */;
 			buildPhases = (
+				85D96BF13D82E8E7D43E0112 /* [CP] Check Pods Manifest.lock */,
 				F87EAB32266DE73500A15F6E /* Sources */,
 				F87EAB33266DE73500A15F6E /* Frameworks */,
 				F87EAB34266DE73500A15F6E /* Resources */,
@@ -136,6 +407,23 @@
 			productReference = F87EAB36266DE73500A15F6E /* AnacoreKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F8F79463266DE90100E7B2CA /* AnacoreKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F79477266DE90300E7B2CA /* Build configuration list for PBXNativeTarget "AnacoreKitDemo" */;
+			buildPhases = (
+				F8F79460266DE90100E7B2CA /* Sources */,
+				F8F79461266DE90100E7B2CA /* Frameworks */,
+				F8F79462266DE90100E7B2CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnacoreKitDemo;
+			productName = AnacoreKitDemo;
+			productReference = F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +437,9 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					F87EAB35266DE73500A15F6E = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F8F79463266DE90100E7B2CA = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -168,6 +459,7 @@
 			targets = (
 				F87EAB2C266DE73500A15F6E /* AnacoreKit */,
 				F87EAB35266DE73500A15F6E /* AnacoreKitTests */,
+				F8F79463266DE90100E7B2CA /* AnacoreKitDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -187,13 +479,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8F79462266DE90100E7B2CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F79473266DE90300E7B2CA /* LaunchScreen.storyboard in Resources */,
+				F8F79470266DE90300E7B2CA /* Assets.xcassets in Resources */,
+				F8F7946E266DE90100E7B2CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85D96BF13D82E8E7D43E0112 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnacoreKit-AnacoreKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		953E8211471C7D353CC9CA84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnacoreKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F87EAB29266DE73500A15F6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87EAB72266DE7FA00A15F6E /* JRALayoutHelper.swift in Sources */,
+				F87EAB6C266DE7FA00A15F6E /* JRABaseModal.swift in Sources */,
+				F87EAB70266DE7FA00A15F6E /* JRAStyleConfig.swift in Sources */,
+				F87EAB6A266DE7FA00A15F6E /* JRATextField.swift in Sources */,
+				F87EAB66266DE7FA00A15F6E /* JRADivider.swift in Sources */,
+				F87EAB67266DE7FA00A15F6E /* JRACard.swift in Sources */,
+				F87EAB71266DE7FA00A15F6E /* JRAStyleProtocols.swift in Sources */,
+				F87EAB6E266DE7FA00A15F6E /* JRAStackView.swift in Sources */,
+				F87EAB6F266DE7FA00A15F6E /* JRAConstraintStruct.swift in Sources */,
+				F87EAB6D266DE7FA00A15F6E /* JRARootVC.swift in Sources */,
+				F87EAB73266DE7FA00A15F6E /* JRAAnimationHelper.swift in Sources */,
+				F87EAB69266DE7FA00A15F6E /* JRALabel.swift in Sources */,
+				F87EAB6B266DE7FA00A15F6E /* JRAOverlay.swift in Sources */,
+				F87EAB68266DE7FA00A15F6E /* JRABorderLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +564,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F79488266F2DEB00E7B2CA /* GWTExpression.swift in Sources */,
 				F87EAB3C266DE73500A15F6E /* AnacoreKitTests.swift in Sources */,
+				F8F7947F266F082900E7B2CA /* JRALayouthelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F79460266DE90100E7B2CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */,
+				F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */,
+				F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +589,25 @@
 			targetProxy = F87EAB38266DE73500A15F6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8F7946C266DE90100E7B2CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8F7946D266DE90100E7B2CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8F79471266DE90300E7B2CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8F79472266DE90300E7B2CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F87EAB3F266DE73500A15F6E /* Debug */ = {
@@ -340,6 +734,7 @@
 		};
 		F87EAB42266DE73500A15F6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5647F3E41F3F9B894346F4 /* Pods-AnacoreKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -364,6 +759,7 @@
 		};
 		F87EAB43266DE73500A15F6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BBD5F5C7A007050BB51EC8A /* Pods-AnacoreKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,7 +784,9 @@
 		};
 		F87EAB45266DE73500A15F6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340ACA44880744E53498EBC2 /* Pods-AnacoreKit-AnacoreKitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q68H52VN7T;
 				INFOPLIST_FILE = AnacoreKitTests/Info.plist;
@@ -406,7 +804,9 @@
 		};
 		F87EAB46266DE73500A15F6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF187469C429CACFC495C86 /* Pods-AnacoreKit-AnacoreKitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q68H52VN7T;
 				INFOPLIST_FILE = AnacoreKitTests/Info.plist;
@@ -416,6 +816,44 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jellyrio.fiftyface.AnacoreKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8F79475266DE90300E7B2CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q68H52VN7T;
+				INFOPLIST_FILE = AnacoreKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jellyrio.fiftyface.AnacoreKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8F79476266DE90300E7B2CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q68H52VN7T;
+				INFOPLIST_FILE = AnacoreKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jellyrio.fiftyface.AnacoreKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,6 +886,15 @@
 			buildConfigurations = (
 				F87EAB45266DE73500A15F6E /* Debug */,
 				F87EAB46266DE73500A15F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F79477266DE90300E7B2CA /* Build configuration list for PBXNativeTarget "AnacoreKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F79475266DE90300E7B2CA /* Debug */,
+				F8F79476266DE90300E7B2CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
