@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CDC3DA1E2A919E765EFC9C83 /* Pods_AnacoreKit_AnacoreKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */; };
 		E2266D2A50AB455498513790 /* Pods_AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */; };
+		F87BB47D26759120007D8B8C /* JRACardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB47C26759120007D8B8C /* JRACardTests.swift */; };
 		F87EAB37266DE73500A15F6E /* AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87EAB2D266DE73500A15F6E /* AnacoreKit.framework */; };
 		F87EAB3C266DE73500A15F6E /* AnacoreKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB3B266DE73500A15F6E /* AnacoreKitTests.swift */; };
 		F87EAB3E266DE73500A15F6E /* AnacoreKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F87EAB30266DE73500A15F6E /* AnacoreKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +53,7 @@
 		5F5647F3E41F3F9B894346F4 /* Pods-AnacoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit.debug.xcconfig"; path = "Target Support Files/Pods-AnacoreKit/Pods-AnacoreKit.debug.xcconfig"; sourceTree = "<group>"; };
 		5FF187469C429CACFC495C86 /* Pods-AnacoreKit-AnacoreKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; path = "Target Support Files/Pods-AnacoreKit-AnacoreKitTests/Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnacoreKit_AnacoreKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87BB47C26759120007D8B8C /* JRACardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRACardTests.swift; sourceTree = "<group>"; };
 		F87EAB2D266DE73500A15F6E /* AnacoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnacoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87EAB30266DE73500A15F6E /* AnacoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnacoreKit.h; sourceTree = "<group>"; };
 		F87EAB31266DE73500A15F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 				AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F87BB47B267590C5007D8B8C /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				F87BB47C26759120007D8B8C /* JRACardTests.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		F87EAB23266DE73500A15F6E = {
@@ -324,6 +334,7 @@
 		F8F7947C266F07CC00E7B2CA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F87BB47B267590C5007D8B8C /* Card */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -567,6 +578,7 @@
 				F8F79488266F2DEB00E7B2CA /* GWTExpression.swift in Sources */,
 				F87EAB3C266DE73500A15F6E /* AnacoreKitTests.swift in Sources */,
 				F8F7947F266F082900E7B2CA /* JRALayouthelperTests.swift in Sources */,
+				F87BB47D26759120007D8B8C /* JRACardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
