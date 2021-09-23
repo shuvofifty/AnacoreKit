@@ -25,6 +25,7 @@ import UIKit
  - Use delegate to add codes on the different point of action
  */
 open class JRAOverlay: UIView {
+    private let loggingKey = "JRAOverlay"
     
     /**
      Configuration setting for the modal in JRAOverlay. Feel free to change the default value to have different animations on overlay
@@ -137,11 +138,11 @@ open class JRAOverlay: UIView {
      */
     open func showModal(with key: String) -> Bool {
         guard let modalConfig = modalMap[key] else {
-            print("Modal cannot be shown as no such modalConfig found with key \(key)")
+            JRALogging.shared.log(with: loggingKey, "Modal cannot be shown as no such modalConfig found with key \(key)")
             return false
         }
         guard let baseWindow = baseWindow else {
-            print("Base window not found while triggering modal show \(key)")
+            JRALogging.shared.log(with: loggingKey, "Base window not found while triggering modal show \(key)")
             return false
         }
         if !isOverlayOn { // Activate the overlay while showing
@@ -191,7 +192,7 @@ open class JRAOverlay: UIView {
      */
     func hideModal(with key: String) -> Bool {
         guard let modalConfig = modalMap[key] else {
-            print("Modal cannot be hide as no such modalConfig found with key \(key)")
+            JRALogging.shared.log(with: loggingKey, "Modal cannot be hide as no such modalConfig found with key \(key)")
             return false
         }
         let modal = modalConfig.modal
@@ -224,7 +225,8 @@ open class JRAOverlay: UIView {
      */
     open func showOverlay(duration: CFTimeInterval = 0.5) {
         guard let baseWindow = baseWindow else {
-            print("Base window is not set or found. Call setOn() before calling this")
+            JRALogging.shared.log(with: loggingKey,"Base window is not set or found. Call setOn() before calling this")
+            print()
             return
         }
         delegate?.JRAOverlayWillLoad(self, id: id)
@@ -245,7 +247,7 @@ open class JRAOverlay: UIView {
      */
     open func hideOverlay(duration: CFTimeInterval = 0.6) {
         guard isOverlayOn else {
-            print("Overlay is not turned on. Call showOverlay() first before calling this")
+            JRALogging.shared.log(with: loggingKey, "Overlay is not turned on. Call showOverlay() first before calling this")
             return
         }
         CATransaction.begin()

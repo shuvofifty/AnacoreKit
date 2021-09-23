@@ -7,26 +7,50 @@
 
 import XCTest
 
-class JRACardTests: XCTestCase {
+@testable import AnacoreKit
+
+class JRACardTests: XCTestCase, GWTExpression {
+    
+    var subject: JRACard!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        subject = JRACard()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        subject = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIntialization() {
+        XCTAssertEqual(subject.subviews.count, 1)
+        XCTAssertTrue(subject.subviews.first is JRAStackView)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testCard_ChangeBackgroundColor() {
+        let backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        
+        when("Background color is set for subject") {
+            let _ = subject.setBackground(color: backgroundColor)
+        }
+        
+        then("background color for the subject matches") {
+            XCTAssertEqual(subject.backgroundColor, backgroundColor)
         }
     }
-
+    
+    func testCard_RowSpacing() {
+        var spacing: CGFloat = 0
+        
+        given("Card Spacing") {
+            spacing = 30
+        }
+        
+        when("set card row spacing to spacing") {
+            let _ = subject.setRowSpacing(to: spacing)
+        }
+        
+        then("card row spacing should match the custom spacing set") {
+            XCTAssertEqual(subject.stack.spacing, spacing)
+        }
+    }
 }

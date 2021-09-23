@@ -32,14 +32,10 @@ open class JRATextField: UIView {
     
     /// The whole textfield with left stack view, textfield and right stack view will go into this card. It can have margin space and own color and complete seperate from other row in the base card view
     public lazy var textFieldCard: JRACard = {
-        let card = JRACard()
-        
-        let textFieldRow = card.addRow(key: JRATextField.textFieldRowKey)
-        let _ = card.addViewTo(key: textFieldRow, view: field, huggingPriority: .defaultLow)
-        
-        card.setMarginSpace(top: 5, right: 0, bottom: 0, left: 0)
-        
-        return card
+        return JRACard()
+            .addRow(key: JRATextField.textFieldRowKey)
+            .addViewTo(key: JRATextField.textFieldRowKey, view: field, huggingPriority: .defaultLow)
+            .setMarginSpace(top: 5, right: 0, bottom: 0, left: 0)
     }()
     
     /// The main text field to refer to
@@ -97,11 +93,17 @@ open class JRATextField: UIView {
         self.addSubview(base)
         
         let _ = base.jraLayoutHookToAllSide(of: self)
-        
-        let _ = base.addViewTo(key: base.addRow(key: JRATextField.titleRowKey), view: titleLabel)
-        let _ = base.addViewTo(key: base.addRow(key: "textFieldCardRow_JRA8891212"), view: textFieldCard, huggingPriority: .defaultLow)
-        let _ = base.addViewTo(key: base.addRow(key: "textFieldDividerRow_JRA8896123"), view: textFieldDivider)
-        let _ = base.addViewTo(key: base.addRow(key: JRATextField.infoRowKey), view: infoLabel)
+        let textFieldCardRowKey = "textFieldCardRow_JRA8891212"
+        let dividerRowKey = "textFieldDividerRow_JRA8896123"
+        let _ = base
+            .addRow(key: JRATextField.titleRowKey)
+            .addRow(key: textFieldCardRowKey)
+            .addRow(key: dividerRowKey)
+            .addRow(key: JRATextField.infoRowKey)
+            .addViewTo(key: JRATextField.titleRowKey, view: titleLabel)
+            .addViewTo(key: textFieldCardRowKey, view: textFieldCard, huggingPriority: .defaultLow)
+            .addViewTo(key: dividerRowKey, view: textFieldDivider)
+            .addViewTo(key: JRATextField.infoRowKey, view: infoLabel)
     }
     
     /**

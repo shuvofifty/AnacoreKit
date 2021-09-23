@@ -21,7 +21,7 @@ open class JRACard: UIView {
     }
     
     /// Base stack that all views will go
-    lazy private var stack: JRAStackView = {
+    lazy open private(set) var stack: JRAStackView = {
         let stack = JRAStackView(subViews: [], spacing: 10, axis: .vertical)
         return stack
     }()
@@ -51,8 +51,9 @@ open class JRACard: UIView {
      
      - Parameter color: The color for the background of the card
      */
-    open func setBackground(color: UIColor) {
+    open func setBackground(color: UIColor) -> JRACard {
         self.backgroundColor = color
+        return self
     }
     
     /**
@@ -60,8 +61,9 @@ open class JRACard: UIView {
      
      - Parameter to: The equal distribution spacing of the rows
      */
-    public func setRowSpacing(to val: CGFloat) {
+    public func setRowSpacing(to val: CGFloat) -> JRACard {
         stack.spacing = val
+        return self
     }
     
     /**
@@ -74,8 +76,9 @@ open class JRACard: UIView {
      - Parameter left: Left spacing from stack view to JRACard view
      - Parameter Bottom: Bottom spacing from stack view to JRACard view
      */
-    public func setMarginSpace(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil) {
+    public func setMarginSpace(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil) -> JRACard {
         baseStackMargin?.setSpacing(top: top, right: right, bottom: bottom, left: left)
+        return self
     }
     
     /**
@@ -97,7 +100,7 @@ open class JRACard: UIView {
      
      - Returns the key for the row created for further reference
      */
-    public func addRow(key: String, spacingBetweenElements: CGFloat = 10, marginTop: CGFloat? = 0, marginRight: CGFloat? = 0, marginBottom: CGFloat? = 0, marginLeft: CGFloat? = 0, elementDistribution: UIStackView.Distribution = .fill, position: Int? = nil) -> String {
+    public func addRow(key: String, spacingBetweenElements: CGFloat = 10, marginTop: CGFloat? = 0, marginRight: CGFloat? = 0, marginBottom: CGFloat? = 0, marginLeft: CGFloat? = 0, elementDistribution: UIStackView.Distribution = .fill, position: Int? = nil) -> JRACard {
         let row = JRAStackView(subViews: [], spacing: spacingBetweenElements, axis: .horizontal)
         let (wrapper, _) = row.jraLayoutAddWrapper(top: marginTop, right: marginRight, bottom: marginBottom, left: marginLeft)
         
@@ -113,7 +116,7 @@ open class JRACard: UIView {
         
         viewMap[key] = ViewRefStruct(wrapper: wrapper, stack: row)
         
-        return key
+        return self
     }
     
     /**
@@ -129,7 +132,7 @@ open class JRACard: UIView {
      
      - Returns true if the reference to the row is found and element added to that row
      */
-    public func addViewTo(key: String, view: UIView, huggingPriority: UILayoutPriority = .defaultLow, indexPosition: Int = -1) -> Bool {
+    public func addViewTo(key: String, view: UIView, huggingPriority: UILayoutPriority = .defaultLow, indexPosition: Int = -1) -> JRACard {
         if let ref = viewMap[key] {
             if indexPosition <= -1 {
                 ref.stack.addArrangedSubview(view)
@@ -138,9 +141,8 @@ open class JRACard: UIView {
             }
             view.setContentHuggingPriority(huggingPriority, for: .horizontal)
             view.setContentCompressionResistancePriority(huggingPriority, for: .horizontal)
-            return true
         }
-        return false
+        return self
     }
     
     /**
@@ -148,20 +150,20 @@ open class JRACard: UIView {
      
      - Returns true if row is found and removed else false if row with the key not found
      */
-    public func removeRow(key: String) -> Bool {
+    public func removeRow(key: String) -> JRACard {
         if let ref = viewMap[key] {
             ref.wrapper.removeFromSuperview()
             viewMap.removeValue(forKey: key)
-            return true
         }
-        return false
+        return self
     }
     
     /// Removes all the view from the card
-    public func removeAllView() {
+    public func removeAllView() -> JRACard {
         for (key, _) in viewMap {
             let _ = removeRow(key: key)
         }
         viewMap = [:]
+        return self
     }
 }
