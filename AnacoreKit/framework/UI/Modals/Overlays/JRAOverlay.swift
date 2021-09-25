@@ -45,7 +45,7 @@ open class JRAOverlay: UIView {
         }
     }
     
-    enum Style {
+    public enum Style {
         case Transparent, Clear
     }
     
@@ -72,7 +72,7 @@ open class JRAOverlay: UIView {
      */
     private var modalMap: [String:ModalInfoStruct] = [:]
     
-    init(style: Style, bgColor: UIColor = .black) {
+    required public init(style: Style, bgColor: UIColor = .black) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
@@ -305,8 +305,8 @@ public protocol JRAOverlayProtocols {
 }
 
 extension JRAOverlayProtocols {
-    func JRAOverlayDidLoad(_ overlay: JRAOverlay, id: String) { /* Empty */ }
-    func JRAOverlayWillLoad(_ overlay: JRAOverlay, id: String) { /* Empty */ }
-    func JRAOverlayDidDisappear(_ overlay: JRAOverlay, id: String) { /* Empty */ }
-    func JRAOverlayWillDisappear(_ overlay: JRAOverlay, id: String) { /* Empty */ }
+    public func JRAOverlayDidLoad(_ overlay: JRAOverlay, id: String) { /* Empty */ }
+    public func JRAOverlayWillLoad(_ overlay: JRAOverlay, id: String) { /* Empty */ }
+    public func JRAOverlayDidDisappear(_ overlay: JRAOverlay, id: String) { /* Empty */ }
+    public func JRAOverlayWillDisappear(_ overlay: JRAOverlay, id: String) { /* Empty */ }
 }

@@ -39,12 +39,12 @@ open class JRALabel: UILabel {
     
     private var tapGestrureRe: UITapGestureRecognizer?
     
-    init(text: String) {
+    required public init(text: String) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.text = text
-        self.numberOfLines = 0
+        self.numberOfLines = 1
         
         tapGestrureRe = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
     }

@@ -20,7 +20,7 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
     private let target: JRARootVCTableProtocol
     private let tableView: JRATable
     
-    init(target: JRARootVCTableProtocol,
+    required public init(target: JRARootVCTableProtocol,
          tableView: JRATable) {
         self.target = target
         self.tableView = tableView
@@ -39,7 +39,10 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
         - triggerReload: Trigger reload table otherwise not
         - animation: The animation to reload the row with
      */
-    open func set(data: T, at index: Int, triggerReload: Bool = true, with animation: UITableView.RowAnimation = .none) {
+    open func set(data: T,
+                  at index: Int,
+                  triggerReload: Bool = true,
+                  with animation: UITableView.RowAnimation = .none) {
         guard index >= 0 else {
             datas.insert(data, at: 0)
             if triggerReload { reloadTable() }
@@ -62,7 +65,9 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
         - datas: List of all the data to be set
         - triggerReload: Trigger reload whole table. Set false if not needed
      */
-    open func setDatas(_ datas: [T], triggerReload: Bool = true) {
+    open func setDatas(_ datas: [T],
+                       triggerReload: Bool = true
+    ) {
         self.datas = datas
         if triggerReload { reloadTable() }
     }

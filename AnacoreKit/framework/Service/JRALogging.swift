@@ -6,12 +6,13 @@
 //
 
 import Foundation
+
 /**
  For logging end to end event with an event key use this protocol in enum and let the framework hand rest
  
  - Register all end to end event key only with this protocol
  */
-protocol JRAEventKeyFlowLogProtocol {
+public protocol JRAEventKeyFlowLogProtocol {
     /**
      Get the flow of the event name that will be tracked from start
      
@@ -29,14 +30,14 @@ protocol JRAEventKeyFlowLogProtocol {
  
  - Register all end to end event action only with this protocol
  */
-protocol JRAEventActionFlowLogProtocol {
+public protocol JRAEventActionFlowLogProtocol {
     /**
      Get the description or the data to log as string
      */
     func getActionDescription() -> String
 }
 
-protocol JRALoggingEngineProtocol {
+public protocol JRALoggingEngineProtocol {
     /**
     Log basic data which don't have any keys
      
@@ -88,7 +89,7 @@ protocol JRALoggingEngineProtocol {
     func endEvent(for event: JRAEventKeyFlowLogProtocol)
 }
 
-protocol JRALoggingProtocol {
+public protocol JRALoggingProtocol {
     /**
      Logging implementation injected from outside if something custom needed. If not **JRADefaultLogEngine** is used as default
      */
@@ -105,7 +106,7 @@ protocol JRALoggingProtocol {
 class JRALogging: JRALoggingProtocol {
     static let shared = JRALogging().logEngine
     
-    var logEngine: JRALoggingEngineProtocol
+    public var logEngine: JRALoggingEngineProtocol
     
     private init() {
         logEngine = JRADefaultLogEngine()
@@ -115,29 +116,29 @@ class JRALogging: JRALoggingProtocol {
 /**
  A default loggin engine from JRA for logging all the events or actions. This is injected in JRA Logging class by default. If you want to add your own implementation then directly set JRALogging -> logEngine value at the start of the app
  */
-class JRADefaultLogEngine: JRALoggingEngineProtocol {
+public class JRADefaultLogEngine: JRALoggingEngineProtocol {
     private var eventMap: [String:[String]] = [:]
     
-    func log(_ data: String) {
+    public func log(_ data: String) {
         print(data)
     }
     
-    func log(with key: String, _ data: Any) {
+    public func log(with key: String, _ data: Any) {
         print("\(key):- \(data)")
     }
     
-    func startEvent(for event: JRAEventKeyFlowLogProtocol, description: String?) {
+    public func startEvent(for event: JRAEventKeyFlowLogProtocol, description: String?) {
         eventMap[event.getEventFlowKey()] = ["Started event: \(event.getEventFlowKey()). Description: \(description ?? event.getDefaultDescription())"]
     }
     
-    func eventLog(_ action: JRAEventActionFlowLogProtocol, for event: JRAEventKeyFlowLogProtocol) {
+    public func eventLog(_ action: JRAEventActionFlowLogProtocol, for event: JRAEventKeyFlowLogProtocol) {
         if eventMap[event.getEventFlowKey()] == nil {
             startEvent(for: event, description: nil)
         }
         eventMap[event.getEventFlowKey()]?.append(action.getActionDescription())
     }
     
-    func dispatchEvent(for event: JRAEventKeyFlowLogProtocol) {
+    public func dispatchEvent(for event: JRAEventKeyFlowLogProtocol) {
         var log = ""
         log += "JRALog: Dispatch for event \(event.getEventFlowKey())\n\n"
         for action in eventMap[event.getEventFlowKey()] ?? [] {
@@ -147,7 +148,7 @@ class JRADefaultLogEngine: JRALoggingEngineProtocol {
         print(log)
     }
     
-    func endEvent(for event: JRAEventKeyFlowLogProtocol) {
+    public func endEvent(for event: JRAEventKeyFlowLogProtocol) {
         eventMap.removeValue(forKey: event.getEventFlowKey())
     }
     

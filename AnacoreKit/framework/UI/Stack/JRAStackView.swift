@@ -12,7 +12,7 @@ import UIKit
  Custom stack view which should be used instead of regular stack view for extra functionality
  */
 open class JRAStackView: UIStackView {
-    init(subViews: [UIView] = [], spacing: CGFloat = 10, axis: NSLayoutConstraint.Axis = .vertical) {
+    required public init(subViews: [UIView] = [], spacing: CGFloat = 10, axis: NSLayoutConstraint.Axis = .vertical) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 open class JRATable: UITableView {
-    init(style: UITableView.Style = .plain) {
+    required public init(style: UITableView.Style = .plain) {
         super.init(frame: .zero, style: style)
         self.translatesAutoresizingMaskIntoConstraints = false
     }

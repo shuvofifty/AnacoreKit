@@ -27,7 +27,9 @@ open class JRADivider: UIView {
     
     private var widthHeightConstraintStruct: JRAConstraintStruct?
     
-    init(axis: NSLayoutConstraint.Axis, fatness: CGFloat, color: UIColor) {
+    required public init(axis: NSLayoutConstraint.Axis,
+                         fatness: CGFloat,
+                         color: UIColor) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         

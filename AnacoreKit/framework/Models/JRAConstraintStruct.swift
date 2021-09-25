@@ -19,7 +19,10 @@ public struct JRAConstraintStruct {
     /**
      Use this to set spacing for the constraints here. It accepts normal positive values and convert them accordingly to fit the desired layout
      */
-    public func setSpacing(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil) {
+    public func setSpacing(top: CGFloat? = nil,
+                           right: CGFloat? = nil,
+                           bottom: CGFloat? = nil,
+                           left: CGFloat? = nil) {
         if let top = top {
             self.top?.constant = top
         }

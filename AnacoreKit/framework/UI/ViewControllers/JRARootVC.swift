@@ -13,7 +13,7 @@ import UIKit
  
  - **Uses**: Simply implement the functions and connect the appropriate delegates
  */
-protocol JRARootVCMainProtocol {
+public protocol JRARootVCMainProtocol {
     
 }
 
@@ -22,7 +22,7 @@ protocol JRARootVCMainProtocol {
  
  - **Uses**: Simply implement the functions and connect the appropriate delegates
  */
-protocol JRARootVCTableProtocol {
+public protocol JRARootVCTableProtocol {
     
 }
 

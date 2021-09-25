@@ -30,7 +30,7 @@ open class JRACard: UIView {
     private var baseStackMargin: JRAConstraintStruct?
     private var viewMap: [String:ViewRefStruct] = [:]
     
-    init() {
+    required public init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
@@ -76,7 +76,10 @@ open class JRACard: UIView {
      - Parameter left: Left spacing from stack view to JRACard view
      - Parameter Bottom: Bottom spacing from stack view to JRACard view
      */
-    public func setMarginSpace(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil) -> JRACard {
+    public func setMarginSpace(top: CGFloat? = nil,
+                               right: CGFloat? = nil,
+                               bottom: CGFloat? = nil,
+                               left: CGFloat? = nil) -> JRACard {
         baseStackMargin?.setSpacing(top: top, right: right, bottom: bottom, left: left)
         return self
     }
@@ -100,7 +103,14 @@ open class JRACard: UIView {
      
      - Returns the key for the row created for further reference
      */
-    public func addRow(key: String, spacingBetweenElements: CGFloat = 10, marginTop: CGFloat? = 0, marginRight: CGFloat? = 0, marginBottom: CGFloat? = 0, marginLeft: CGFloat? = 0, elementDistribution: UIStackView.Distribution = .fill, position: Int? = nil) -> JRACard {
+    public func addRow(key: String,
+                       spacingBetweenElements: CGFloat = 10,
+                       marginTop: CGFloat? = 0,
+                       marginRight: CGFloat? = 0,
+                       marginBottom: CGFloat? = 0,
+                       marginLeft: CGFloat? = 0,
+                       elementDistribution: UIStackView.Distribution = .fill,
+                       position: Int? = nil) -> JRACard {
         let row = JRAStackView(subViews: [], spacing: spacingBetweenElements, axis: .horizontal)
         let (wrapper, _) = row.jraLayoutAddWrapper(top: marginTop, right: marginRight, bottom: marginBottom, left: marginLeft)
         
@@ -132,15 +142,18 @@ open class JRACard: UIView {
      
      - Returns true if the reference to the row is found and element added to that row
      */
-    public func addViewTo(key: String, view: UIView, huggingPriority: UILayoutPriority = .defaultLow, indexPosition: Int = -1) -> JRACard {
+    public func addViewTo(key: String,
+                          view: UIView,
+                          huggingPriority: UILayoutPriority = .defaultLow,
+                          indexPosition: Int = -1) -> JRACard {
         if let ref = viewMap[key] {
             if indexPosition <= -1 {
                 ref.stack.addArrangedSubview(view)
             } else {
                 ref.stack.insertArrangedSubview(view, at: indexPosition)
             }
-            view.setContentHuggingPriority(huggingPriority, for: .horizontal)
             view.setContentCompressionResistancePriority(huggingPriority, for: .horizontal)
+            view.setContentHuggingPriority(huggingPriority, for: .horizontal)
         }
         return self
     }

@@ -16,7 +16,7 @@ extension UIView {
      
      - Returns: A constraint struct of all the constraint added for reference in future
      */
-    func jraLayoutHookToAllSide(of parent: UIView, top: CGFloat? = 0, right: CGFloat? = 0, bottom: CGFloat? = 0, left: CGFloat? = 0) -> JRAConstraintStruct {
+    public func jraLayoutHookToAllSide(of parent: UIView, top: CGFloat? = 0, right: CGFloat? = 0, bottom: CGFloat? = 0, left: CGFloat? = 0) -> JRAConstraintStruct {
         var mainCon = JRAConstraintStruct()
         if let top = top {
             mainCon.top = self.topAnchor.constraint(equalTo: parent.topAnchor, constant: top)
@@ -44,7 +44,7 @@ extension UIView {
      
      - Returns: A width height constraint struct for reference in future
      */
-    func jraLayoutSet(width: CGFloat? = nil, height: CGFloat? = nil) -> JRAConstraintStruct {
+    public func jraLayoutSet(width: CGFloat? = nil, height: CGFloat? = nil) -> JRAConstraintStruct {
         var mainCon = JRAConstraintStruct()
         if let width = width {
             mainCon.width = self.widthAnchor.constraint(equalToConstant: width)
@@ -64,7 +64,7 @@ extension UIView {
      
      - Returns: A center x and/or center y constraint structure for reference in future
      */
-    func jraLayoutCenter(to parent: UIView, x: CGFloat? = nil, y: CGFloat? = nil) -> JRAConstraintStruct {
+    public func jraLayoutCenter(to parent: UIView, x: CGFloat? = nil, y: CGFloat? = nil) -> JRAConstraintStruct {
         var mainCon = JRAConstraintStruct()
         if let x = x {
             mainCon.centerX = self.centerXAnchor.constraint(equalTo: parent.centerXAnchor, constant: x)
@@ -97,7 +97,7 @@ extension UIView {
      
      - Returns: The wrapper UIView and a constraint struct of the ones added for future reference
      */
-    func jraLayoutAddWrapper(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil, x: CGFloat? = nil, y: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat? = nil) -> (UIView, JRAConstraintStruct) {
+    public func jraLayoutAddWrapper(top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, left: CGFloat? = nil, x: CGFloat? = nil, y: CGFloat? = nil, width: CGFloat? = nil, height: CGFloat? = nil) -> (UIView, JRAConstraintStruct) {
         let wrapper = UIView()
         wrapper.translatesAutoresizingMaskIntoConstraints = false
         

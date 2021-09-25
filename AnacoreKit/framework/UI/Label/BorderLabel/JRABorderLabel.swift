@@ -17,9 +17,9 @@ open class JRABorderLabel: UIView {
         return view
     }()
     
-    public var spaceConstraint: JRAConstraintStruct = JRAConstraintStruct()
+    public var spaceConstraint: JRAConstraintStruct!
     
-    init(text: String) {
+    required public init(text: String) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         

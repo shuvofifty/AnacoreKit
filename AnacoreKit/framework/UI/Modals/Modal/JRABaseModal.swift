@@ -28,11 +28,11 @@ open class JRABaseModal: UIView {
      */
     public var delegate: JRABaseModalGeneralProtocol?
     /// BaseView Constraint for spacing from main modal view
-    public var baseViewConstraint: JRAConstraintStruct = JRAConstraintStruct()
+    public var baseViewConstraint: JRAConstraintStruct!
     
     private var id: String = ""
     
-    init(id: String) {
+    required public init(id: String) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         

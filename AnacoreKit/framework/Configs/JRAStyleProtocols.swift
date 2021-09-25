@@ -11,7 +11,7 @@ import UIKit
 /**
  Basic colors for overall app
  */
-protocol JRAStyleBaseColorConfigProtocol {
+public protocol JRAStyleBaseColorConfigProtocol {
     var primaryColor: UIColor { get }
     var secondaryColor: UIColor { get }
     var tertiaryColor: UIColor { get }
@@ -21,7 +21,7 @@ protocol JRAStyleBaseColorConfigProtocol {
 /**
  Basic alert colors for using in alert type
  */
-protocol JRAStyleAlertColorConfigProtocol {
+public protocol JRAStyleAlertColorConfigProtocol {
     var infoColor: UIColor { get }
     var successColor: UIColor { get }
     var errorColor: UIColor { get }
@@ -31,7 +31,7 @@ protocol JRAStyleAlertColorConfigProtocol {
 /**
  Basic font configuration for various sizes
  */
-protocol JRAStyleFontConfigProtocol {
+public protocol JRAStyleFontConfigProtocol {
     var defaultFontSize: CGFloat { get }
     /// Small Font
     var sFontSize: CGFloat { get }

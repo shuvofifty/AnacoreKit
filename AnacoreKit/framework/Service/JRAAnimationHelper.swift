@@ -18,7 +18,7 @@ public class JRAAnimationHelper {
     /**
      This is how the element will act like will it enter or leave
      */
-    enum Entry {
+    public enum Entry {
         case Enter, Leave
     }
     
@@ -28,7 +28,7 @@ public class JRAAnimationHelper {
      - Example: If set top means the element will move top direction to its main position
      - There is no tight rule how to use this however, its always recommended to follow the standard.
      */
-    enum Direction {
+    public enum Direction {
         case top, bottom, left, right, none
     }
     
@@ -38,7 +38,7 @@ public class JRAAnimationHelper {
      - Example: If set start means no matter what the animation is the element will be at the start position like left or top
      - There is no tight rule how to use this however, its always recommended to follow the standard.
      */
-    enum Position {
+    public enum Position {
         case start, center, end
     }
     
@@ -47,7 +47,7 @@ public class JRAAnimationHelper {
      
      - Example: If set to **from** means the element will move from the main position
      */
-    enum Move {
+    public enum Move {
         case from, to
     }
     
@@ -64,7 +64,7 @@ public class JRAAnimationHelper {
      
      - Returns Key frame animation object to add it the view layer
      */
-    func fade(_ entry: Entry, duration: CFTimeInterval) -> CAKeyframeAnimation {
+    public func fade(_ entry: Entry, duration: CFTimeInterval) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: "opacity")
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         animation.duration = duration
@@ -80,7 +80,7 @@ public class JRAAnimationHelper {
         return animation
     }
     
-    func move(_ moveDirection: Move, direction: Direction, offset: Double = 80.0, duration: CFTimeInterval) -> CAKeyframeAnimation {
+    public func move(_ moveDirection: Move, direction: Direction, offset: Double = 80.0, duration: CFTimeInterval) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation()
         
         switch direction {

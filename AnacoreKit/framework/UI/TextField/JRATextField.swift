@@ -74,7 +74,7 @@ open class JRATextField: UIView {
         return divider
     }()
     
-    init() {
+    required public init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
