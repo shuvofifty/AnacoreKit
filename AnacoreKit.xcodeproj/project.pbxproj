@@ -10,6 +10,7 @@
 		CDC3DA1E2A919E765EFC9C83 /* Pods_AnacoreKit_AnacoreKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */; };
 		E2266D2A50AB455498513790 /* Pods_AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */; };
 		F84EADC026FC2758003189FC /* JRALogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADBF26FC2758003189FC /* JRALogging.swift */; };
+		F84EADD027015FDD003189FC /* JRAConfigContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADCF27015FDD003189FC /* JRAConfigContainer.swift */; };
 		F87BB47D26759120007D8B8C /* JRACardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB47C26759120007D8B8C /* JRACardTests.swift */; };
 		F87BB4D126B0D312007D8B8C /* JRATable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB4D026B0D312007D8B8C /* JRATable.swift */; };
 		F87BB4DA26B0D4EC007D8B8C /* JRARootDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB4D926B0D4EC007D8B8C /* JRARootDatasource.swift */; };
@@ -57,6 +58,7 @@
 		5FF187469C429CACFC495C86 /* Pods-AnacoreKit-AnacoreKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; path = "Target Support Files/Pods-AnacoreKit-AnacoreKitTests/Pods-AnacoreKit-AnacoreKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnacoreKit_AnacoreKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84EADBF26FC2758003189FC /* JRALogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRALogging.swift; sourceTree = "<group>"; };
+		F84EADCF27015FDD003189FC /* JRAConfigContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRAConfigContainer.swift; sourceTree = "<group>"; };
 		F87BB47C26759120007D8B8C /* JRACardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRACardTests.swift; sourceTree = "<group>"; };
 		F87BB4D026B0D312007D8B8C /* JRATable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRATable.swift; sourceTree = "<group>"; };
 		F87BB4D926B0D4EC007D8B8C /* JRARootDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRARootDatasource.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				F87EAB61266DE7FA00A15F6E /* JRAStyleConfig.swift */,
 				F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */,
+				F84EADCF27015FDD003189FC /* JRAConfigContainer.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				F84EADC026FC2758003189FC /* JRALogging.swift in Sources */,
 				F87EAB67266DE7FA00A15F6E /* JRACard.swift in Sources */,
 				F87EAB71266DE7FA00A15F6E /* JRAStyleProtocols.swift in Sources */,
+				F84EADD027015FDD003189FC /* JRAConfigContainer.swift in Sources */,
 				F87EAB6E266DE7FA00A15F6E /* JRAStackView.swift in Sources */,
 				F87EAB6F266DE7FA00A15F6E /* JRAConstraintStruct.swift in Sources */,
 				F87EAB6D266DE7FA00A15F6E /* JRARootVC.swift in Sources */,

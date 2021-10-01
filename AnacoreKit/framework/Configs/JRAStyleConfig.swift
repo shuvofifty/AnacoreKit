@@ -8,31 +8,6 @@
 import Foundation
 import UIKit
 
-/**
- Configuration helper class for styles for the framework component
- 
- - Able to inject your own custom configs. Just create a struct which implements the config protocol
-    - JRAStyleBaseColorConfigProtocol
-    - JRAStyleAlertColorConfigProtocol
-    - JRAStyleFontConfigProtocol
- - By default it will use the JRA Default style config struct
- */
-public class JRAStyleHelper {
-    public typealias StyleProtocols = JRAStyleBaseColorConfigProtocol & JRAStyleAlertColorConfigProtocol & JRAStyleFontConfigProtocol
-    
-    static let shared = JRAStyleHelper()
-    
-    public private(set) var styleConfig: StyleProtocols
-    
-    private init() {
-        styleConfig = JRAStyleDefaultConfig()
-    }
-    
-    func setStyleConfig(config: StyleProtocols) {
-        styleConfig = config
-    }
-}
-
 public struct JRAStyleDefaultConfig: JRAStyleBaseColorConfigProtocol, JRAStyleAlertColorConfigProtocol, JRAStyleFontConfigProtocol {
     public var defaultFontSize: CGFloat = 18
     
