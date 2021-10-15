@@ -16,22 +16,22 @@ extension UIView {
      
      - Returns: A constraint struct of all the constraint added for reference in future
      */
-    public func jraLayoutHookToAllSide(of parent: UIView, top: CGFloat? = 0, right: CGFloat? = 0, bottom: CGFloat? = 0, left: CGFloat? = 0) -> JRAConstraintStruct {
+    public func jraLayoutHookToAllSide(of parent: UIView, top: CGFloat? = 0, right: CGFloat? = 0, bottom: CGFloat? = 0, left: CGFloat? = 0, useSafeAreaLayoutGuide: Bool = false) -> JRAConstraintStruct {
         var mainCon = JRAConstraintStruct()
         if let top = top {
-            mainCon.top = self.topAnchor.constraint(equalTo: parent.topAnchor, constant: top)
+            mainCon.top = self.topAnchor.constraint(equalTo: useSafeAreaLayoutGuide ? parent.safeAreaLayoutGuide.topAnchor : parent.topAnchor, constant: top)
             mainCon.top?.isActive = true
         }
         if let right = right {
-            mainCon.right = self.rightAnchor.constraint(equalTo: parent.rightAnchor, constant: -right)
+            mainCon.right = self.rightAnchor.constraint(equalTo: useSafeAreaLayoutGuide ? parent.safeAreaLayoutGuide.rightAnchor : parent.rightAnchor, constant: -right)
             mainCon.right?.isActive = true
         }
         if let bottom = bottom {
-            mainCon.bottom = self.bottomAnchor.constraint(equalTo: parent.bottomAnchor, constant: -bottom)
+            mainCon.bottom = self.bottomAnchor.constraint(equalTo: useSafeAreaLayoutGuide ? parent.safeAreaLayoutGuide.bottomAnchor : parent.bottomAnchor, constant: -bottom)
             mainCon.bottom?.isActive = true
         }
         if let left = left {
-            mainCon.left = self.leftAnchor.constraint(equalTo: parent.leftAnchor, constant: left)
+            mainCon.left = self.leftAnchor.constraint(equalTo: useSafeAreaLayoutGuide ? parent.safeAreaLayoutGuide.leftAnchor : parent.leftAnchor, constant: left)
             mainCon.left?.isActive = true
         }
         return mainCon
@@ -120,5 +120,23 @@ extension UIView {
         mainCon.height = sizeCon.height
         
         return (wrapper, mainCon)
+    }
+    
+    /**
+     Set corner radius of a view
+     
+     - Parameters:
+        - cornerRadius: Corner radius of the view
+     */
+    public func jraSet(cornerRadius: CGFloat) {
+        layer.cornerRadius = cornerRadius
+    }
+    
+    public func jraSetDropShadow() {
+        layer.shadowRadius = 7
+        layer.shadowOffset = .zero
+        layer.shadowOpacity = 0.3
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public struct JRAStyleDefaultConfig: JRAStyleBaseColorConfigProtocol, JRAStyleAlertColorConfigProtocol, JRAStyleFontConfigProtocol {
-    public var defaultFontSize: CGFloat = 18
+    public var defaultFontSize: CGFloat = 20
     
     public var sFontSize: CGFloat = 16
     
@@ -19,9 +19,9 @@ public struct JRAStyleDefaultConfig: JRAStyleBaseColorConfigProtocol, JRAStyleAl
     
     public var lFontSize: CGFloat = 22
     
-    public var xlFontSize: CGFloat = 25
+    public var xlFontSize: CGFloat = 28
     
-    public var xxlFontSize: CGFloat = 30
+    public var xxlFontSize: CGFloat = 34
     
     public var background: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     

@@ -154,6 +154,10 @@ open class JRACard: UIView {
             }
             view.setContentCompressionResistancePriority(huggingPriority, for: .horizontal)
             view.setContentHuggingPriority(huggingPriority, for: .horizontal)
+            if let huggingLabelProtocol = view as? JRALabelHuggingProtocol {
+                huggingLabelProtocol.label.setContentCompressionResistancePriority(huggingPriority, for: .horizontal)
+                huggingLabelProtocol.label.setContentHuggingPriority(huggingPriority, for: .horizontal)
+            }
         }
         return self
     }

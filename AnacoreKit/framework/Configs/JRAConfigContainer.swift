@@ -23,7 +23,7 @@ public class JRAConfigContainer {
      */
     public typealias StyleProtocols = JRAStyleBaseColorConfigProtocol & JRAStyleAlertColorConfigProtocol & JRAStyleFontConfigProtocol
     
-    private var styleConfig: StyleProtocols!
+    public private(set) var styleConfig: StyleProtocols!
     
     public init(styleConfig: StyleProtocols) {
         self.styleConfig = styleConfig
@@ -34,7 +34,7 @@ public class JRAConfigContainer {
  A shared config container for all the default configuration for the app config.
  */
 public class JRASharedConfigContainer {
-    static let shared = JRAConfigContainer(styleConfig:  JRAStyleDefaultConfig())
+    public static let shared = JRAConfigContainer(styleConfig:  JRAStyleDefaultConfig())
     
     private init() {}
 }

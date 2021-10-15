@@ -35,6 +35,5 @@ public protocol JRARootVCTableProtocol {
 open class JRARootVC: UIViewController, JRARootVCMainProtocol, JRARootVCTableProtocol {
     open override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = JRAStyleHelper.shared.styleConfig.background
     }
 }

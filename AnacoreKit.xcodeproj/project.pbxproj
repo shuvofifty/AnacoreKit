@@ -11,6 +11,10 @@
 		E2266D2A50AB455498513790 /* Pods_AnacoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2AFEFDE8D51D60300D18CD /* Pods_AnacoreKit.framework */; };
 		F84EADC026FC2758003189FC /* JRALogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADBF26FC2758003189FC /* JRALogging.swift */; };
 		F84EADD027015FDD003189FC /* JRAConfigContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADCF27015FDD003189FC /* JRAConfigContainer.swift */; };
+		F84EADDC27076E4D003189FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADDB27076E4D003189FC /* HomeViewController.swift */; };
+		F84EADE227077E5D003189FC /* JRAScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADE127077E5D003189FC /* JRAScrollView.swift */; };
+		F84EADE7270862F6003189FC /* JRABaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADE6270862F5003189FC /* JRABaseCard.swift */; };
+		F84EADEC271988AA003189FC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84EADEB271988AA003189FC /* TableViewController.swift */; };
 		F87BB47D26759120007D8B8C /* JRACardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB47C26759120007D8B8C /* JRACardTests.swift */; };
 		F87BB4D126B0D312007D8B8C /* JRATable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB4D026B0D312007D8B8C /* JRATable.swift */; };
 		F87BB4DA26B0D4EC007D8B8C /* JRARootDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BB4D926B0D4EC007D8B8C /* JRARootDatasource.swift */; };
@@ -59,6 +63,10 @@
 		AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnacoreKit_AnacoreKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84EADBF26FC2758003189FC /* JRALogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRALogging.swift; sourceTree = "<group>"; };
 		F84EADCF27015FDD003189FC /* JRAConfigContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRAConfigContainer.swift; sourceTree = "<group>"; };
+		F84EADDB27076E4D003189FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F84EADE127077E5D003189FC /* JRAScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRAScrollView.swift; sourceTree = "<group>"; };
+		F84EADE6270862F5003189FC /* JRABaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRABaseCard.swift; sourceTree = "<group>"; };
+		F84EADEB271988AA003189FC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F87BB47C26759120007D8B8C /* JRACardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRACardTests.swift; sourceTree = "<group>"; };
 		F87BB4D026B0D312007D8B8C /* JRATable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRATable.swift; sourceTree = "<group>"; };
 		F87BB4D926B0D4EC007D8B8C /* JRARootDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRARootDatasource.swift; sourceTree = "<group>"; };
@@ -130,6 +138,23 @@
 				AF29357E59609BF570B17BD7 /* Pods_AnacoreKit_AnacoreKitTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F84EADDA27076E19003189FC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F84EADDB27076E4D003189FC /* HomeViewController.swift */,
+				F84EADEB271988AA003189FC /* TableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F84EADE027077E49003189FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F84EADE127077E5D003189FC /* JRAScrollView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F87BB47B267590C5007D8B8C /* Card */ = {
@@ -229,6 +254,7 @@
 		F87EAB4A266DE7FA00A15F6E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F84EADE027077E49003189FC /* Views */,
 				F87BB4CF26B0D2C2007D8B8C /* Table */,
 				F87EAB4B266DE7FA00A15F6E /* Misc */,
 				F87EAB4D266DE7FA00A15F6E /* Card */,
@@ -253,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F87EAB4E266DE7FA00A15F6E /* JRACard.swift */,
+				F84EADE6270862F5003189FC /* JRABaseCard.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -354,6 +381,7 @@
 		F8F79465266DE90100E7B2CA /* AnacoreKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F84EADDA27076E19003189FC /* Home */,
 				F8F79466266DE90100E7B2CA /* AppDelegate.swift */,
 				F8F79468266DE90100E7B2CA /* SceneDelegate.swift */,
 				F8F7946A266DE90100E7B2CA /* ViewController.swift */,
@@ -605,11 +633,13 @@
 				F87EAB66266DE7FA00A15F6E /* JRADivider.swift in Sources */,
 				F84EADC026FC2758003189FC /* JRALogging.swift in Sources */,
 				F87EAB67266DE7FA00A15F6E /* JRACard.swift in Sources */,
+				F84EADE227077E5D003189FC /* JRAScrollView.swift in Sources */,
 				F87EAB71266DE7FA00A15F6E /* JRAStyleProtocols.swift in Sources */,
 				F84EADD027015FDD003189FC /* JRAConfigContainer.swift in Sources */,
 				F87EAB6E266DE7FA00A15F6E /* JRAStackView.swift in Sources */,
 				F87EAB6F266DE7FA00A15F6E /* JRAConstraintStruct.swift in Sources */,
 				F87EAB6D266DE7FA00A15F6E /* JRARootVC.swift in Sources */,
+				F84EADE7270862F6003189FC /* JRABaseCard.swift in Sources */,
 				F87EAB73266DE7FA00A15F6E /* JRAAnimationHelper.swift in Sources */,
 				F87EAB69266DE7FA00A15F6E /* JRALabel.swift in Sources */,
 				F87EAB6B266DE7FA00A15F6E /* JRAOverlay.swift in Sources */,
@@ -637,6 +667,8 @@
 				F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */,
 				F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */,
 				F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */,
+				F84EADEC271988AA003189FC /* TableViewController.swift in Sources */,
+				F84EADDC27076E4D003189FC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

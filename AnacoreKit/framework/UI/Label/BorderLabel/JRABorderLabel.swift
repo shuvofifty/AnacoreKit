@@ -11,7 +11,7 @@ import UIKit
 /**
  A wrapper view of UI label to have a border around or with the background of UILabel. Use spaceConstraint to change space between border and label
  */
-open class JRABorderLabel: UIView {
+open class JRABorderLabel: UIView, JRALabelHuggingProtocol {
     public lazy var label: JRALabel = {
         let view = JRALabel(text: "")
         return view
@@ -32,4 +32,8 @@ open class JRABorderLabel: UIView {
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+public protocol JRALabelHuggingProtocol {
+    var label: JRALabel { get }
 }
