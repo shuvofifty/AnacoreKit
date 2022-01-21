@@ -34,19 +34,25 @@ open class JRALabel: UILabel {
         }
     }
     
+    public var customFont: JRAStyleCustomFontProtocol!
+    
     private var tapClosure: TapCompletionType = {any in }
     private var tapValue: Any? = nil
     
     private var tapGestrureRe: UITapGestureRecognizer?
     
-    required public init(text: String) {
+    required public init(text: String,
+                         font: UIFont = JRASharedConfigContainer.shared.fontSizeConfig.defaultFontSize,
+                         color: UIColor = JRASharedConfigContainer.shared.fontColorConfig.black,
+                         customFontConfig: JRAStyleCustomFontProtocol = JRASharedConfigContainer.shared.defaultFont) {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         
+        self.customFont = customFontConfig
         self.text = text
         self.numberOfLines = 1
-        
-        tapGestrureRe = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        self.font = font
+        self.textColor = color
     }
     
     required public init?(coder: NSCoder) {
@@ -57,7 +63,7 @@ open class JRALabel: UILabel {
      No need to call this from outside. Used this to override only. Setting size and weight will trigger this
      */
     open func updateFontSystem() {
-        self.font = UIFont.systemFont(ofSize: size, weight: weight)
+        self.font = customFont.getFont(with: size, weight: weight)
     }
     
     /**
@@ -76,9 +82,13 @@ open class JRALabel: UILabel {
      Make the whole UI Label tappable with passed value and completion when the user tap on the label
      */
     open func addTapFeature(value: Any?, completion: @escaping TapCompletionType) {
+        if tapGestrureRe == nil {
+            tapGestrureRe = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        }
         self.isUserInteractionEnabled = true
         self.tapValue = value
         self.tapClosure = completion
+        self.addGestureRecognizer(tapGestrureRe!)
     }
     
     @objc private func labelTapped() {

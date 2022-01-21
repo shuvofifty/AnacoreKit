@@ -36,6 +36,19 @@
 		F87EAB71266DE7FA00A15F6E /* JRAStyleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */; };
 		F87EAB72266DE7FA00A15F6E /* JRALayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB64266DE7FA00A15F6E /* JRALayoutHelper.swift */; };
 		F87EAB73266DE7FA00A15F6E /* JRAAnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EAB65266DE7FA00A15F6E /* JRAAnimationHelper.swift */; };
+		F8B25A90279589EC006F0413 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A84279589EB006F0413 /* Roboto-Regular.ttf */; };
+		F8B25A91279589EC006F0413 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A85279589EB006F0413 /* Roboto-Bold.ttf */; };
+		F8B25A92279589EC006F0413 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A86279589EB006F0413 /* Roboto-Black.ttf */; };
+		F8B25A93279589EC006F0413 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A87279589EB006F0413 /* Roboto-Thin.ttf */; };
+		F8B25A96279589EC006F0413 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A8A279589EB006F0413 /* Roboto-Light.ttf */; };
+		F8B25A98279589EC006F0413 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25A8C279589EC006F0413 /* Roboto-Medium.ttf */; };
+		F8B25AA4279AD324006F0413 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B25AA3279AD324006F0413 /* UIFont+Extensions.swift */; };
+		F8B25AAF279AD983006F0413 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AA9279AD982006F0413 /* Oswald-SemiBold.ttf */; };
+		F8B25AB0279AD983006F0413 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAA279AD982006F0413 /* Oswald-Medium.ttf */; };
+		F8B25AB1279AD983006F0413 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAB279AD982006F0413 /* Oswald-ExtraLight.ttf */; };
+		F8B25AB2279AD983006F0413 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAC279AD982006F0413 /* Oswald-Light.ttf */; };
+		F8B25AB3279AD983006F0413 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */; };
+		F8B25AB4279AD983006F0413 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */; };
 		F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79466266DE90100E7B2CA /* AppDelegate.swift */; };
 		F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79468266DE90100E7B2CA /* SceneDelegate.swift */; };
 		F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7946A266DE90100E7B2CA /* ViewController.swift */; };
@@ -91,6 +104,19 @@
 		F87EAB62266DE7FA00A15F6E /* JRAStyleProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAStyleProtocols.swift; sourceTree = "<group>"; };
 		F87EAB64266DE7FA00A15F6E /* JRALayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRALayoutHelper.swift; sourceTree = "<group>"; };
 		F87EAB65266DE7FA00A15F6E /* JRAAnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRAAnimationHelper.swift; sourceTree = "<group>"; };
+		F8B25A84279589EB006F0413 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F8B25A85279589EB006F0413 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F8B25A86279589EB006F0413 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		F8B25A87279589EB006F0413 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		F8B25A8A279589EB006F0413 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F8B25A8C279589EC006F0413 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F8B25AA3279AD324006F0413 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		F8B25AA9279AD982006F0413 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		F8B25AAA279AD982006F0413 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		F8B25AAB279AD982006F0413 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F8B25AAC279AD982006F0413 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnacoreKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F79466266DE90100E7B2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F79468266DE90100E7B2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +169,8 @@
 		F84EADDA27076E19003189FC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F84EADF027198F37003189FC /* TableViews */,
 				F84EADDB27076E4D003189FC /* HomeViewController.swift */,
-				F84EADEB271988AA003189FC /* TableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -155,6 +181,14 @@
 				F84EADE127077E5D003189FC /* JRAScrollView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F84EADF027198F37003189FC /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				F84EADEB271988AA003189FC /* TableViewController.swift */,
+			);
+			path = TableViews;
 			sourceTree = "<group>";
 		};
 		F87BB47B267590C5007D8B8C /* Card */ = {
@@ -243,6 +277,8 @@
 		F87EAB49266DE7FA00A15F6E /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				F8B25AA2279AD307006F0413 /* Extensions */,
+				F8B25A7E279585FD006F0413 /* Fonts */,
 				F87EAB4A266DE7FA00A15F6E /* UI */,
 				F87EAB5E266DE7FA00A15F6E /* Models */,
 				F87EAB60266DE7FA00A15F6E /* Configs */,
@@ -376,6 +412,49 @@
 				F84EADBF26FC2758003189FC /* JRALogging.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F8B25A7E279585FD006F0413 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25AA8279AD968006F0413 /* Oswald */,
+				F8B25A83279589D1006F0413 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F8B25A83279589D1006F0413 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25A86279589EB006F0413 /* Roboto-Black.ttf */,
+				F8B25A85279589EB006F0413 /* Roboto-Bold.ttf */,
+				F8B25A8A279589EB006F0413 /* Roboto-Light.ttf */,
+				F8B25A8C279589EC006F0413 /* Roboto-Medium.ttf */,
+				F8B25A84279589EB006F0413 /* Roboto-Regular.ttf */,
+				F8B25A87279589EB006F0413 /* Roboto-Thin.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		F8B25AA2279AD307006F0413 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25AA3279AD324006F0413 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8B25AA8279AD968006F0413 /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */,
+				F8B25AAB279AD982006F0413 /* Oswald-ExtraLight.ttf */,
+				F8B25AAC279AD982006F0413 /* Oswald-Light.ttf */,
+				F8B25AAA279AD982006F0413 /* Oswald-Medium.ttf */,
+				F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */,
+				F8B25AA9279AD982006F0413 /* Oswald-SemiBold.ttf */,
+			);
+			path = Oswald;
 			sourceTree = "<group>";
 		};
 		F8F79465266DE90100E7B2CA /* AnacoreKitDemo */ = {
@@ -552,6 +631,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B25A93279589EC006F0413 /* Roboto-Thin.ttf in Resources */,
+				F8B25AB2279AD983006F0413 /* Oswald-Light.ttf in Resources */,
+				F8B25AB3279AD983006F0413 /* Oswald-Bold.ttf in Resources */,
+				F8B25A91279589EC006F0413 /* Roboto-Bold.ttf in Resources */,
+				F8B25A90279589EC006F0413 /* Roboto-Regular.ttf in Resources */,
+				F8B25A96279589EC006F0413 /* Roboto-Light.ttf in Resources */,
+				F8B25A92279589EC006F0413 /* Roboto-Black.ttf in Resources */,
+				F8B25AB4279AD983006F0413 /* Oswald-Regular.ttf in Resources */,
+				F8B25AB0279AD983006F0413 /* Oswald-Medium.ttf in Resources */,
+				F8B25A98279589EC006F0413 /* Roboto-Medium.ttf in Resources */,
+				F8B25AAF279AD983006F0413 /* Oswald-SemiBold.ttf in Resources */,
+				F8B25AB1279AD983006F0413 /* Oswald-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +729,7 @@
 				F84EADD027015FDD003189FC /* JRAConfigContainer.swift in Sources */,
 				F87EAB6E266DE7FA00A15F6E /* JRAStackView.swift in Sources */,
 				F87EAB6F266DE7FA00A15F6E /* JRAConstraintStruct.swift in Sources */,
+				F8B25AA4279AD324006F0413 /* UIFont+Extensions.swift in Sources */,
 				F87EAB6D266DE7FA00A15F6E /* JRARootVC.swift in Sources */,
 				F84EADE7270862F6003189FC /* JRABaseCard.swift in Sources */,
 				F87EAB73266DE7FA00A15F6E /* JRAAnimationHelper.swift in Sources */,

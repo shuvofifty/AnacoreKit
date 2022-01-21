@@ -5,6 +5,7 @@
 //  Created by Shubroto Shuvo on 6/7/21.
 //
 
+import AnacoreKit
 import UIKit
 
 @main
@@ -14,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let frameworkRobotoFont = JRAStyleOswaldFont()
+        let bundle = Bundle(identifier: "com.jellyrio.fiftyface.AnacoreKit")!
+        frameworkRobotoFont.registerAsDefaultFont(with: bundle)
+        
+        UIFont.familyNames.forEach { (font) in
+            print("Family Name: \(font)")
+            UIFont.fontNames(forFamilyName: font).forEach({
+                print("--Font Name: \($0)")
+            })
+        }
+        
         return true
     }
 

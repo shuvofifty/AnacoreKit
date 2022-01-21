@@ -15,13 +15,13 @@ open class JRABaseCard: JRACard {
     static let headerDividerRowKey = "headerDividerRowKeyJRA_800098"
     
     public private(set) lazy var header: JRALabel = {
-        let label = JRALabel(text: "")
-        label.changeStyle(size: JRASharedConfigContainer.shared.styleConfig.lFontSize, weight: .bold)
+        let label = JRALabel(text: "", font: JRASharedConfigContainer.shared.fontSizeConfig.lFontSize)
+        
         return label
     }()
     
     public private(set) lazy var divider: JRADivider = {
-        let label = JRADivider(axis: .horizontal, fatness: 2, color: JRASharedConfigContainer.shared.styleConfig.primaryColor)
+        let label = JRADivider(axis: .horizontal, fatness: 2, color: JRASharedConfigContainer.shared.baseColorConfig.primaryColor)
         return label
     }()
     

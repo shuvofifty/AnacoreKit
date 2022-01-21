@@ -15,18 +15,37 @@ import Foundation
  - Its used to tackle the problem of testing especially if you inject the config container which will be easy to do the testing
  */
 public class JRAConfigContainer {
+    public private(set) var fontSizeConfig: JRAStyleFontConfigProtocol
+    public private(set) var alertConfig: JRAStyleAlertColorConfigProtocol
+    public private(set) var baseColorConfig: JRAStyleBaseColorConfigProtocol
+    public private(set) var fontColorConfig: JRAStyleFontColorConfigProtocol
+    public private(set) var defaultFont: JRAStyleCustomFontProtocol
+    
+    public init(fontSizeConfig: JRAStyleFontConfigProtocol,
+                alertConfig: JRAStyleAlertColorConfigProtocol,
+                baseColorConfig: JRAStyleBaseColorConfigProtocol,
+                fontColorConfig: JRAStyleFontColorConfigProtocol,
+                defaultFont: JRAStyleCustomFontProtocol) {
+        self.fontSizeConfig = fontSizeConfig
+        self.alertConfig = alertConfig
+        self.baseColorConfig = baseColorConfig
+        self.fontColorConfig = fontColorConfig
+        self.defaultFont = defaultFont
+    }
+    
     /**
-     - Able to inject your own custom configs. Just create a struct which implements the config protocol
-        - JRAStyleBaseColorConfigProtocol
-        - JRAStyleAlertColorConfigProtocol
-        - JRAStyleFontConfigProtocol
+     Update the style configuration with your own custom config and the changes will be applied to all components and sub components
      */
-    public typealias StyleProtocols = JRAStyleBaseColorConfigProtocol & JRAStyleAlertColorConfigProtocol & JRAStyleFontConfigProtocol
-    
-    public private(set) var styleConfig: StyleProtocols!
-    
-    public init(styleConfig: StyleProtocols) {
-        self.styleConfig = styleConfig
+    public func update(fontSizeConfig: JRAStyleFontConfigProtocol,
+                       alertConfig: JRAStyleAlertColorConfigProtocol,
+                       baseColorConfig: JRAStyleBaseColorConfigProtocol,
+                       fontColorConfig: JRAStyleFontColorConfigProtocol,
+                       defaultFont: JRAStyleCustomFontProtocol) {
+        self.fontSizeConfig = fontSizeConfig
+        self.alertConfig = alertConfig
+        self.baseColorConfig = baseColorConfig
+        self.fontColorConfig = fontColorConfig
+        self.defaultFont = defaultFont
     }
 }
 
@@ -34,7 +53,11 @@ public class JRAConfigContainer {
  A shared config container for all the default configuration for the app config.
  */
 public class JRASharedConfigContainer {
-    public static let shared = JRAConfigContainer(styleConfig:  JRAStyleDefaultConfig())
+    public static let shared = JRAConfigContainer(fontSizeConfig: JRAStyleDefaultFontConfig(),
+                                                  alertConfig: JRAStyleDefaultAlertColorConfig(),
+                                                  baseColorConfig: JRAStyleDefaultBaseColorConfig(),
+                                                  fontColorConfig: JRAStyleDefaultFontColorConfig(),
+                                                  defaultFont: JRAStyleOswaldFont())
     
     private init() {}
 }
