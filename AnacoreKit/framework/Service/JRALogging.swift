@@ -97,27 +97,12 @@ public protocol JRALoggingProtocol {
 }
 
 /**
- Helper class to log all your dev stuffs
- 
- - Use this instead of basic print functionality for advance and easy level of logging
- - Inject your implementation class of how you want to display or do with the logs
- - Use the shared instance for logging and set delegate implementation in app delegate
- */
-class JRALogging: JRALoggingProtocol {
-    static let shared = JRALogging().logEngine
-    
-    public var logEngine: JRALoggingEngineProtocol
-    
-    private init() {
-        logEngine = JRADefaultLogEngine()
-    }
-}
-
-/**
  A default loggin engine from JRA for logging all the events or actions. This is injected in JRA Logging class by default. If you want to add your own implementation then directly set JRALogging -> logEngine value at the start of the app
  */
 public class JRADefaultLogEngine: JRALoggingEngineProtocol {
     private var eventMap: [String:[String]] = [:]
+    
+    public init() {}
     
     public func log(_ data: String) {
         print(data)

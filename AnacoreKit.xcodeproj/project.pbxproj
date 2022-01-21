@@ -49,6 +49,7 @@
 		F8B25AB2279AD983006F0413 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAC279AD982006F0413 /* Oswald-Light.ttf */; };
 		F8B25AB3279AD983006F0413 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */; };
 		F8B25AB4279AD983006F0413 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */; };
+		F8B25ABF279AE0B1006F0413 /* DemoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */; };
 		F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79466266DE90100E7B2CA /* AppDelegate.swift */; };
 		F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79468266DE90100E7B2CA /* SceneDelegate.swift */; };
 		F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7946A266DE90100E7B2CA /* ViewController.swift */; };
@@ -117,6 +118,7 @@
 		F8B25AAC279AD982006F0413 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
 		F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoConfig.swift; sourceTree = "<group>"; };
 		F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnacoreKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F79466266DE90100E7B2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F79468266DE90100E7B2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -457,9 +459,18 @@
 			path = Oswald;
 			sourceTree = "<group>";
 		};
+		F8B25ABD279AE09F006F0413 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		F8F79465266DE90100E7B2CA /* AnacoreKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F8B25ABD279AE09F006F0413 /* Configs */,
 				F84EADDA27076E19003189FC /* Home */,
 				F8F79466266DE90100E7B2CA /* AppDelegate.swift */,
 				F8F79468266DE90100E7B2CA /* SceneDelegate.swift */,
@@ -760,6 +771,7 @@
 				F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */,
 				F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */,
 				F84EADEC271988AA003189FC /* TableViewController.swift in Sources */,
+				F8B25ABF279AE0B1006F0413 /* DemoConfig.swift in Sources */,
 				F84EADDC27076E4D003189FC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

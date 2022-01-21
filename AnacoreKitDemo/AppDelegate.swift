@@ -15,16 +15,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let frameworkRobotoFont = JRAStyleOswaldFont()
+        let frameworkRobotoFont = JRAStyleRobotoFont()
         let bundle = Bundle(identifier: "com.jellyrio.fiftyface.AnacoreKit")!
         frameworkRobotoFont.registerAsDefaultFont(with: bundle)
         
-        UIFont.familyNames.forEach { (font) in
-            print("Family Name: \(font)")
-            UIFont.fontNames(forFamilyName: font).forEach({
-                print("--Font Name: \($0)")
-            })
-        }
+        JRASharedConfigContainer.shared.update(
+            fontSizeConfig: DemoStyleFontConfig(),
+            alertConfig: DemoStyleAlertColorConfig(),
+            baseColorConfig: DemoStyleBaseColorConfig(),
+            fontColorConfig: DemoStyleFontColorConfig(),
+            defaultFont: frameworkRobotoFont,
+            logEngine: JRADefaultLogEngine()
+        )
+        
+        /** -- Use this to check if your font got registered
+         
+         UIFont.familyNames.forEach { (font) in
+             print("Family Name: \(font)")
+             UIFont.fontNames(forFamilyName: font).forEach({
+                 print("--Font Name: \($0)")
+             })
+         }
+         
+         */
+        
         
         return true
     }
