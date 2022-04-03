@@ -13,11 +13,16 @@ class TableViewController: JRARootVC {
         JRATable()
     }()
     
+    private var datasource: JRARootDatasource<String>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = JRASharedConfigContainer.shared.baseColorConfig.background
         
         view.addSubview(jraTable)
         let _ = jraTable.jraLayoutHookToAllSide(of: view, useSafeAreaLayoutGuide: true)
+        
+        datasource = JRARootDatasource<String>(target: self, tableView: jraTable)
+        datasource?.setup()
     }
 }

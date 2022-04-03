@@ -13,17 +13,30 @@ import UIKit
  
  - **Uses**: Use **JRARootVCTableProtocol** to communicate back to the component using it
  */
-open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataSource {
+open class JRARootDatasource: NSObject, UITableViewDelegate, UITableViewDataSource, JRADatasourceCallBackProtocol {
     
-    private(set) var datas: [T] = []
+    public static let CELL_ID = "JRARootDatasource_Cell_ID"
+    
+    private(set) var datas: [Any] = []
     
     private let target: JRARootVCTableProtocol
     private let tableView: JRATable
+    private let singleCellIdentifier: String
     
     required public init(target: JRARootVCTableProtocol,
-         tableView: JRATable) {
+         tableView: JRATable,
+         singleCellIdentifier: String = JRARootDatasource.CELL_ID) {
         self.target = target
         self.tableView = tableView
+        self.singleCellIdentifier = singleCellIdentifier
+    }
+    
+    /**
+     Override this to do custom setup or by default it will just coonect the assigned tableView datasource and delegate to this class
+     */
+    open func setup() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     /**
@@ -39,7 +52,7 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
         - triggerReload: Trigger reload table otherwise not
         - animation: The animation to reload the row with
      */
-    open func set(data: T,
+    open func set(data: Any,
                   at index: Int,
                   triggerReload: Bool = true,
                   with animation: UITableView.RowAnimation = .none) {
@@ -65,7 +78,7 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
         - datas: List of all the data to be set
         - triggerReload: Trigger reload whole table. Set false if not needed
      */
-    open func setDatas(_ datas: [T],
+    open func setDatas(_ datas: [Any],
                        triggerReload: Bool = true
     ) {
         self.datas = datas
@@ -77,7 +90,19 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
     }
     
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: getTableCellIdentifier(from: indexPath), for: indexPath) as! JRARootTableViewCell
+        cell.renderSetupUI(indexPath: indexPath)
+        cell.eventDelegate = self
+        return configTableCell(with: indexPath, cell: cell)
+    }
+    
+    open func configTableCell(with indexPath: IndexPath, cell: JRARootTableViewCell) -> JRARootTableViewCell {
+        cell.configure(with: datas[indexPath.row], uid: datas[indexPath.row])
+        return cell
+    }
+    
+    open func sendTargetEvent(with type: Any, value: Any, indexPath: IndexPath, uid: Any) {
+        // TODO:- Send targeted event back to VC or upto you
     }
     
     open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,6 +111,10 @@ open class JRARootDatasource<T>: NSObject, UITableViewDelegate, UITableViewDataS
     
     open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
+    }
+    
+    open func getTableCellIdentifier(from indexPath: IndexPath) -> String {
+        singleCellIdentifier
     }
     
     /**

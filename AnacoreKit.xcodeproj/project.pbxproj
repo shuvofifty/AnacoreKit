@@ -50,6 +50,7 @@
 		F8B25AB3279AD983006F0413 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */; };
 		F8B25AB4279AD983006F0413 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */; };
 		F8B25ABF279AE0B1006F0413 /* DemoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */; };
+		F8B25AC527ACD159006F0413 /* JRARootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B25AC427ACD159006F0413 /* JRARootTableViewCell.swift */; };
 		F8F79467266DE90100E7B2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79466266DE90100E7B2CA /* AppDelegate.swift */; };
 		F8F79469266DE90100E7B2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F79468266DE90100E7B2CA /* SceneDelegate.swift */; };
 		F8F7946B266DE90100E7B2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7946A266DE90100E7B2CA /* ViewController.swift */; };
@@ -119,6 +120,7 @@
 		F8B25AAD279AD983006F0413 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
 		F8B25AAE279AD983006F0413 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoConfig.swift; sourceTree = "<group>"; };
+		F8B25AC427ACD159006F0413 /* JRARootTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRARootTableViewCell.swift; sourceTree = "<group>"; };
 		F8F79464266DE90100E7B2CA /* AnacoreKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnacoreKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F79466266DE90100E7B2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F79468266DE90100E7B2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		F87BB4CF26B0D2C2007D8B8C /* Table */ = {
 			isa = PBXGroup;
 			children = (
+				F8B25AC327ACD144006F0413 /* Cells */,
 				F87BB4D826B0D4D6007D8B8C /* Datasource */,
 				F87BB4D026B0D312007D8B8C /* JRATable.swift */,
 			);
@@ -465,6 +468,14 @@
 				F8B25ABE279AE0B1006F0413 /* DemoConfig.swift */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		F8B25AC327ACD144006F0413 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8B25AC427ACD159006F0413 /* JRARootTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F8F79465266DE90100E7B2CA /* AnacoreKitDemo */ = {
@@ -730,6 +741,7 @@
 				F87EAB72266DE7FA00A15F6E /* JRALayoutHelper.swift in Sources */,
 				F87EAB6C266DE7FA00A15F6E /* JRABaseModal.swift in Sources */,
 				F87BB4D126B0D312007D8B8C /* JRATable.swift in Sources */,
+				F8B25AC527ACD159006F0413 /* JRARootTableViewCell.swift in Sources */,
 				F87EAB70266DE7FA00A15F6E /* JRAStyleConfig.swift in Sources */,
 				F87EAB6A266DE7FA00A15F6E /* JRATextField.swift in Sources */,
 				F87EAB66266DE7FA00A15F6E /* JRADivider.swift in Sources */,

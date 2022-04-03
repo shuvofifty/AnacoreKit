@@ -19,14 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let bundle = Bundle(identifier: "com.jellyrio.fiftyface.AnacoreKit")!
         frameworkRobotoFont.registerAsDefaultFont(with: bundle)
         
-        JRASharedConfigContainer.shared.update(
-            fontSizeConfig: DemoStyleFontConfig(),
-            alertConfig: DemoStyleAlertColorConfig(),
-            baseColorConfig: DemoStyleBaseColorConfig(),
-            fontColorConfig: DemoStyleFontColorConfig(),
-            defaultFont: frameworkRobotoFont,
-            logEngine: JRADefaultLogEngine()
-        )
+//        JRASharedConfigContainer.shared.update(
+//            fontSizeConfig: DemoStyleFontConfig(),
+//            alertConfig: DemoStyleAlertColorConfig(),
+//            baseColorConfig: DemoStyleBaseColorConfig(),
+//            fontColorConfig: DemoStyleFontColorConfig(),
+//            defaultFont: frameworkRobotoFont,
+//            logEngine: JRADefaultLogEngine()
+//        )
         
         /** -- Use this to check if your font got registered
          
